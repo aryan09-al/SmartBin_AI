@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>SmartBin AI — Smarter Waste Management. Cleaner Cities.</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"></head><body class="bg-[#f3f6f4] text-slate-800 antialiased"><nav class="fixed top-0 inset-x-0 z-50 glass border-b border-slate-200/70"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><div class="flex items-center gap-2.5"><div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-600 to-teal-500 flex items-center justify-center text-white shadow-lg"><i class="fa-solid fa-trash-can"></i></div><div><p class="font-extrabold text-lg leading-none">SmartBin <span class="text-green-600">AI</span></p><p class="text-[10px] text-slate-500 tracking-widest">SMART CITY WASTE OS</p></div></div><div class="hidden md:flex gap-7 text-sm font-medium text-slate-600"><a href="#features" class="hover:text-green-600">Features</a><a href="#how" class="hover:text-green-600">How It Works</a><a href="#benefits" class="hover:text-green-600">Benefits</a><a href="#impact" class="hover:text-green-600">Impact</a></div><a href="dashboard.html" class="text-sm font-bold bg-slate-900 text-white px-5 py-2.5 rounded-xl hover:bg-green-700 transition shadow">View Dashboard <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a></div></nav><!--P2--><header class="relative overflow-hidden pt-28 pb-16 bg-gradient-to-b from-white via-green-50/60 to-[#f3f6f4]"><div class="hero-blob w-96 h-96 bg-green-300 -top-20 -left-20"></div><div class="hero-blob w-96 h-96 bg-teal-200 top-24 -right-20" style="animation-delay:1.5s"></div><div class="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center"><div><div class="inline-flex items-center gap-2 bg-white border border-green-200 text-green-700 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm mb-5"><span class="w-2 h-2 rounded-full bg-green-500 pulse-dot text-green-500"></span>LIVE · 50 BINS CONNECTED</div><h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">Smarter Waste Management. <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-teal-500 to-blue-600">Cleaner Cities.</span></h1><p class="mt-5 text-lg text-slate-600 max-w-xl">IoT fill-sensors + machine-learning forecasts predict overflows <b>hours before they happen</b> — crews collect the right bins at the right time.</p><div class="mt-8 flex flex-wrap gap-3"><a href="dashboard.html" class="font-bold bg-gradient-to-r from-green-600 to-teal-500 text-white px-7 py-3.5 rounded-2xl shadow-xl hover:-translate-y-0.5 transition"><i class="fa-solid fa-gauge-high mr-2"></i>View Dashboard</a><a href="#how" class="font-bold bg-white border-2 border-slate-200 px-7 py-3.5 rounded-2xl hover:border-green-500 hover:text-green-700 transition"><i class="fa-solid fa-circle-play mr-2 text-green-600"></i>How It Works</a></div><div class="mt-8 flex gap-6 text-sm"><div><p class="text-2xl font-black">38%</p><p class="text-slate-500">fewer overflows</p></div><div class="w-px h-10 bg-slate-200"></div><div><p class="text-2xl font-black">27%</p><p class="text-slate-500">fuel saved</p></div><div class="w-px h-10 bg-slate-200"></div><div><p class="text-2xl font-black">91%</p><p class="text-slate-500">AI accuracy</p></div></div></div><div class="relative"><div class="bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border border-slate-700"><div class="flex items-center gap-1.5 px-4 py-3 bg-slate-800/80"><span class="w-3 h-3 rounded-full bg-red-400"></span><span class="w-3 h-3 rounded-full bg-yellow-400"></span><span class="w-3 h-3 rounded-full bg-green-400"></span><span class="ml-3 text-xs text-slate-400 font-mono">app.smartbin.ai — live grid</span><span class="ml-auto text-[10px] font-bold bg-green-500/20 text-green-300 px-2 py-0.5 rounded-full">● LIVE</span></div><div class="p-5 grid grid-cols-3 gap-3"><div class="bg-slate-800 rounded-2xl p-3.5"><p class="text-[11px] text-slate-400 font-semibold">AVG FILL</p><p class="text-2xl font-black text-white">64%</p><div class="h-1.5 bg-slate-700 rounded-full mt-2"><div class="h-full w-[64%] rounded-full bg-gradient-to-r from-green-400 to-teal-300"></div></div></div><div class="bg-slate-800 rounded-2xl p-3.5"><p class="text-[11px] text-slate-400 font-semibold">CRITICAL</p><p class="text-2xl font-black text-red-400">8 bins</p><p class="text-[11px] text-slate-500 mt-1">pickup now</p></div><div class="bg-slate-800 rounded-2xl p-3.5"><p class="text-[11px] text-slate-400 font-semibold">AI SAVED</p><p class="text-2xl font-black text-violet-300">142 trips</p><p class="text-[11px] text-slate-500 mt-1">this month</p></div><div class="col-span-3 bg-slate-800 rounded-2xl p-4"><div class="flex justify-between items-center mb-2"><p class="text-xs font-bold text-slate-300"><i class="fa-solid fa-brain text-violet-400 mr-1.5"></i>AI PREDICTION · DB-102</p><span class="text-[10px] font-bold bg-violet-500/25 text-violet-200 px-2 py-0.5 rounded-full">91% CONFIDENCE</span></div><div class="flex items-center gap-3"><div class="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden"><div class="h-full w-[72%] rounded-full bg-gradient-to-r from-amber-400 to-red-400 progress-shimmer"></div></div><span class="text-sm font-black text-white">72%</span></div><p class="text-xs text-slate-400 mt-2">Full in <b class="text-amber-300">~3.5 hrs</b> · dispatch Route R-4 before 2:30 PM</p></div></div></div><div class="absolute -bottom-5 left-6 bg-white rounded-2xl shadow-xl border px-4 py-3 flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-green-100 text-green-600 flex items-center justify-center"><i class="fa-solid fa-truck-fast"></i></div><div><p class="text-xs font-bold">Route R-4 optimized</p><p class="text-[11px] text-slate-500">6 stops · 4.2 km · −31% fuel</p></div></div></div></div></header><!--P3--><section id="features" class="max-w-7xl mx-auto px-4 py-16"><p class="text-xs font-bold text-green-600 tracking-widest">PLATFORM FEATURES</p><h2 class="text-3xl font-black mt-2">Everything a smart city needs</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8"><div class="card-hover bg-white rounded-2xl border p-6"><div class="w-11 h-11 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-tower-broadcast"></i></div><h3 class="font-bold">Real-time IoT Monitoring</h3><p class="text-sm text-slate-500 mt-1.5">Ultrasonic fill, temperature & battery telemetry every 5 minutes from all 50 bins.</p></div><div class="card-hover bg-white rounded-2xl border p-6"><div class="w-11 h-11 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-brain"></i></div><h3 class="font-bold">AI Overflow Prediction</h3><p class="text-sm text-slate-500 mt-1.5">Regression model forecasts time-to-full with 91% confidence from history.</p></div><div class="card-hover bg-white rounded-2xl border p-6"><div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-map-location-dot"></i></div><h3 class="font-bold">Live City Map</h3><p class="text-sm text-slate-500 mt-1.5">Green / amber / red markers show every bin. Click any marker for details.</p></div><div class="card-hover bg-white rounded-2xl border p-6"><div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-bell"></i></div><h3 class="font-bold">Smart Alerts</h3><p class="text-sm text-slate-500 mt-1.5">Critical, warning & info alerts with filtering and crew dispatch actions.</p></div><div class="card-hover bg-white rounded-2xl border p-6"><div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-route"></i></div><h3 class="font-bold">Route Optimization</h3><p class="text-sm text-slate-500 mt-1.5">AI builds shortest pickup routes — 27% less fuel, 142 trips saved monthly.</p></div><div class="card-hover bg-white rounded-2xl border p-6"><div class="w-11 h-11 rounded-xl bg-slate-800 text-white flex items-center justify-center text-lg mb-4"><i class="fa-solid fa-chart-line"></i></div><h3 class="font-bold">Analytics & History</h3><p class="text-sm text-slate-500 mt-1.5">Daily/weekly waste trends, actual-vs-predicted accuracy and reports.</p></div></div></section><!--P4--><section id="how" class="bg-slate-900 py-16"><div class="max-w-7xl mx-auto px-4"><p class="text-xs font-bold text-green-400 tracking-widest">HOW IT WORKS</p><h2 class="text-3xl font-black text-white mt-2">Sensor to street in 4 steps</h2><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8"><div class="bg-slate-800 rounded-2xl p-6 border border-slate-700"><p class="text-3xl font-black text-green-400">01</p><i class="fa-solid fa-satellite-dish text-2xl text-slate-300 mt-3"></i><h3 class="font-bold text-white mt-2">Sensor detects level</h3><p class="text-sm text-slate-400 mt-1">Ultrasonic sensor measures fill + temperature every 5 min.</p></div><div class="bg-slate-800 rounded-2xl p-6 border border-slate-700"><p class="text-3xl font-black text-teal-300">02</p><i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-300 mt-3"></i><h3 class="font-bold text-white mt-2">Data sent to cloud</h3><p class="text-sm text-slate-400 mt-1">LoRa / NB-IoT gateway streams telemetry securely.</p></div><div class="bg-slate-800 rounded-2xl p-6 border border-slate-700"><p class="text-3xl font-black text-violet-300">03</p><i class="fa-solid fa-brain text-2xl text-slate-300 mt-3"></i><h3 class="font-bold text-white mt-2">AI predicts full time</h3><p class="text-sm text-slate-400 mt-1">ML model forecasts overflow hours ahead, 91% confidence.</p></div><div class="bg-slate-800 rounded-2xl p-6 border border-slate-700"><p class="text-3xl font-black text-amber-300">04</p><i class="fa-solid fa-truck-fast text-2xl text-slate-300 mt-3"></i><h3 class="font-bold text-white mt-2">Crew gets alert</h3><p class="text-sm text-slate-400 mt-1">Optimized route pushed to driver app & dashboard.</p></div></div></div></section><!--P5--><section id="benefits" class="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 items-center"><div><p class="text-xs font-bold text-green-600 tracking-widest">BENEFITS</p><h2 class="text-3xl font-black mt-2">Cleaner streets, lower costs</h2><div class="mt-6 space-y-4"><div class="flex gap-4 bg-white border rounded-2xl p-5"><div class="w-10 h-10 shrink-0 rounded-xl bg-green-100 text-green-600 flex items-center justify-center"><i class="fa-solid fa-leaf"></i></div><div><h3 class="font-bold text-sm">Hygiene & public health</h3><p class="text-sm text-slate-500">No overflowing bins near markets, hospitals & schools.</p></div></div><div class="flex gap-4 bg-white border rounded-2xl p-5"><div class="w-10 h-10 shrink-0 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center"><i class="fa-solid fa-indian-rupee-sign"></i></div><div><h3 class="font-bold text-sm">Lower operating cost</h3><p class="text-sm text-slate-500">Collect only full bins — cut fuel, labour & fleet wear.</p></div></div><div class="flex gap-4 bg-white border rounded-2xl p-5"><div class="w-10 h-10 shrink-0 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center"><i class="fa-solid fa-recycle"></i></div><div><h3 class="font-bold text-sm">Higher recycling</h3><p class="text-sm text-slate-500">Zone-level analytics lift segregation & recycling 12%.</p></div></div></div></div><div id="impact" class="bg-gradient-to-br from-green-600 to-teal-600 rounded-3xl p-8 text-white shadow-xl"><h3 class="font-black text-2xl">Pilot impact · Sector 12</h3><div class="grid grid-cols-2 gap-4 mt-6"><div class="bg-white/15 rounded-2xl p-5"><p class="text-3xl font-black">50</p><p class="text-sm text-green-50">smart bins live</p></div><div class="bg-white/15 rounded-2xl p-5"><p class="text-3xl font-black">2.1t</p><p class="text-sm text-green-50">waste / day tracked</p></div><div class="bg-white/15 rounded-2xl p-5"><p class="text-3xl font-black">−38%</p><p class="text-sm text-green-50">overflow complaints</p></div><div class="bg-white/15 rounded-2xl p-5"><p class="text-3xl font-black">4.8★</p><p class="text-sm text-green-50">citizen rating</p></div></div><a href="dashboard.html" class="mt-6 inline-block bg-white text-green-700 font-bold px-6 py-3 rounded-xl text-sm">Open live demo <i class="fa-solid fa-arrow-right ml-1"></i></a></div></section><footer class="bg-slate-900 text-slate-400 py-10"><div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6"><div><p class="font-extrabold text-white text-lg">SmartBin <span class="text-green-400">AI</span></p><p class="text-sm mt-1">Smarter Waste Management. Cleaner Cities. · B.Tech Final-Year Project Demo</p></div><div class="flex gap-8 text-sm"><div><p class="font-bold text-white mb-2">Product</p><a href="dashboard.html" class="block hover:text-green-400">Dashboard</a><a href="predictions.html" class="block hover:text-green-400">AI Predictions</a><a href="map.html" class="block hover:text-green-400">City Map</a></div><div><p class="font-bold text-white mb-2">Team</p><a href="alerts.html" class="block hover:text-green-400">Alerts</a><a href="history.html" class="block hover:text-green-400">History</a><a href="settings.html" class="block hover:text-green-400">Settings</a></div></div></div><p class="text-center text-xs mt-8 text-slate-500">© 2026 SmartBin AI · Mock data for demonstration</p></footer></body></html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>SmartBin AI — Smarter Waste Management. Cleaner Cities.</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#f3f6f4] text-slate-800 antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 inset-x-0 z-50 glass border-b border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+
+            <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-600 to-teal-500
+                            flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+
+                <div>
+                    <p class="font-extrabold text-lg leading-none">
+                        SmartBin <span class="text-green-600">AI</span>
+                    </p>
+                    <p class="text-[10px] text-slate-500 tracking-widest">
+                        SMART CITY WASTE OS
+                    </p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex gap-7 text-sm font-medium text-slate-600">
+                <a href="#features" class="hover:text-green-600">Features</a>
+                <a href="#how" class="hover:text-green-600">How It Works</a>
+                <a href="#benefits" class="hover:text-green-600">Benefits</a>
+                <a href="#impact" class="hover:text-green-600">Impact</a>
+            </div>
+
+            <a href="dashboard.html"
+               class="text-sm font-bold bg-slate-900 text-white px-5 py-2.5 rounded-xl
+                      hover:bg-green-700 transition shadow">
+                View Dashboard
+                <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+            </a>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="relative overflow-hidden pt-28 pb-16 bg-gradient-to-b from-white
+                   via-green-50/60 to-[#f3f6f4]">
+
+        <div class="hero-blob w-96 h-96 bg-green-300 -top-20 -left-20"></div>
+        <div class="hero-blob w-96 h-96 bg-teal-200 top-24 -right-20"
+             style="animation-delay:1.5s"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- HERO TEXT -->
+            <div>
+
+                <div class="inline-flex items-center gap-2 bg-white border border-green-200
+                            text-green-700 text-xs font-bold px-3.5 py-1.5 rounded-full
+                            shadow-sm mb-5">
+
+                    <span class="w-2 h-2 rounded-full bg-green-500 pulse-dot"></span>
+                    LIVE · 50 BINS CONNECTED
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
+
+                    Smarter Waste Management.
+
+                    <span class="text-transparent bg-clip-text
+                                 bg-gradient-to-r from-green-600 via-teal-500 to-blue-600">
+                        Cleaner Cities.
+                    </span>
+
+                </h1>
+
+                <p class="mt-5 text-lg text-slate-600 max-w-xl">
+                    IoT fill-sensors + machine-learning forecasts predict overflows
+                    <b>hours before they happen</b> — crews collect the right bins
+                    at the right time.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+
+                    <a href="dashboard.html"
+                       class="font-bold bg-gradient-to-r from-green-600 to-teal-500
+                              text-white px-7 py-3.5 rounded-2xl shadow-xl
+                              hover:-translate-y-0.5 transition">
+
+                        <i class="fa-solid fa-gauge-high mr-2"></i>
+                        View Dashboard
+                    </a>
+
+                    <a href="#how"
+                       class="font-bold bg-white border-2 border-slate-200 px-7 py-3.5
+                              rounded-2xl hover:border-green-500 hover:text-green-700 transition">
+
+                        <i class="fa-solid fa-circle-play mr-2 text-green-600"></i>
+                        How It Works
+                    </a>
+
+                </div>
+
+                <div class="mt-8 flex gap-6 text-sm">
+
+                    <div>
+                        <p class="text-2xl font-black">38%</p>
+                        <p class="text-slate-500">fewer overflows</p>
+                    </div>
+
+                    <div class="w-px h-10 bg-slate-200"></div>
+
+                    <div>
+                        <p class="text-2xl font-black">27%</p>
+                        <p class="text-slate-500">fuel saved</p>
+                    </div>
+
+                    <div class="w-px h-10 bg-slate-200"></div>
+
+                    <div>
+                        <p class="text-2xl font-black">91%</p>
+                        <p class="text-slate-500">AI accuracy</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD PREVIEW -->
+            <div class="relative">
+
+                <div class="bg-slate-900 rounded-3xl shadow-2xl overflow-hidden
+                            border border-slate-700">
+
+                    <div class="flex items-center gap-1.5 px-4 py-3 bg-slate-800/80">
+
+                        <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-400"></span>
+
+                        <span class="ml-3 text-xs text-slate-400 font-mono">
+                            app.smartbin.ai — live grid
+                        </span>
+
+                        <span class="ml-auto text-[10px] font-bold bg-green-500/20
+                                     text-green-300 px-2 py-0.5 rounded-full">
+                            ● LIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5 grid grid-cols-3 gap-3">
+
+                        <!-- AVG FILL -->
+                        <div class="bg-slate-800 rounded-2xl p-3.5">
+
+                            <p class="text-[11px] text-slate-400 font-semibold">
+                                AVG FILL
+                            </p>
+
+                            <p class="text-2xl font-black text-white">
+                                64%
+                            </p>
+
+                            <div class="h-1.5 bg-slate-700 rounded-full mt-2">
+                                <div class="h-full w-[64%] rounded-full
+                                            bg-gradient-to-r from-green-400 to-teal-300">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- CRITICAL -->
+                        <div class="bg-slate-800 rounded-2xl p-3.5">
+
+                            <p class="text-[11px] text-slate-400 font-semibold">
+                                CRITICAL
+                            </p>
+
+                            <p class="text-2xl font-black text-red-400">
+                                8 bins
+                            </p>
+
+                            <p class="text-[11px] text-slate-500 mt-1">
+                                pickup now
+                            </p>
+
+                        </div>
+
+
+                        <!-- AI SAVED -->
+                        <div class="bg-slate-800 rounded-2xl p-3.5">
+
+                            <p class="text-[11px] text-slate-400 font-semibold">
+                                AI SAVED
+                            </p>
+
+                            <p class="text-2xl font-black text-violet-300">
+                                142 trips
+                            </p>
+
+                            <p class="text-[11px] text-slate-500 mt-1">
+                                this month
+                            </p>
+
+                        </div>
+
+
+                        <!-- AI PREDICTION -->
+                        <div class="col-span-3 bg-slate-800 rounded-2xl p-4">
+
+                            <div class="flex justify-between items-center mb-2">
+
+                                <p class="text-xs font-bold text-slate-300">
+
+                                    <i class="fa-solid fa-brain text-violet-400 mr-1.5"></i>
+                                    AI PREDICTION · DB-102
+
+                                </p>
+
+                                <span class="text-[10px] font-bold bg-violet-500/25
+                                             text-violet-200 px-2 py-0.5 rounded-full">
+                                    91% CONFIDENCE
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex items-center gap-3">
+
+                                <div class="flex-1 h-3 bg-slate-700 rounded-full overflow-hidden">
+
+                                    <div class="h-full w-[72%] rounded-full
+                                                bg-gradient-to-r from-amber-400 to-red-400
+                                                progress-shimmer">
+                                    </div>
+
+                                </div>
+
+                                <span class="text-sm font-black text-white">
+                                    72%
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-xs text-slate-400 mt-2">
+
+                                Full in
+                                <b class="text-amber-300">~3.5 hrs</b>
+                                · dispatch Route R-4 before 2:30 PM
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ROUTE CARD -->
+                <div class="absolute -bottom-5 left-6 bg-white rounded-2xl shadow-xl
+                            border px-4 py-3 flex items-center gap-3">
+
+                    <div class="w-10 h-10 rounded-xl bg-green-100 text-green-600
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-bold">
+                            Route R-4 optimized
+                        </p>
+
+                        <p class="text-[11px] text-slate-500">
+                            6 stops · 4.2 km · −31% fuel
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-4 py-16">
+
+        <p class="text-xs font-bold text-green-600 tracking-widest">
+            PLATFORM FEATURES
+        </p>
+
+        <h2 class="text-3xl font-black mt-2">
+            Everything a smart city needs
+        </h2>
+
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+
+
+            <!-- FEATURE 1 -->
+            <div class="card-hover bg-white rounded-2xl border p-6">
+
+                <div class="w-11 h-11 rounded-xl bg-green-100 text-green-600
+                            flex items-center justify-center text-lg mb-4">
+
+                    <i class="fa-solid fa-tower-broadcast"></i>
+
+                </div>
+
+                <h3 class="font-bold">
+                    Real-time IoT Monitoring
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1.5">
+                    Ultrasonic fill, temperature & battery telemetry every
+                    5 minutes from all 50 bins.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 2 -->
+            <div class="card-hover bg-white rounded-2xl border p-6">
+
+                <div class="w-11 h-11 rounded-xl bg-violet-100 text-violet-600
+                            flex items-center justify-center text-lg mb-4">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <h3 class="font-bold">
+                    AI Overflow Prediction
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1.5">
+                    Regression model forecasts time-to-full with
+                    91% confidence from history.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 3 -->
+            <div class="card-hover bg-white rounded-2xl border p-6">
+
+                <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600
+                            flex items-center justify-center text-lg mb-4">
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                </div>
+
+                <h3 class="font-bold">
+                    Live City Map
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1.5">
+                    Green / amber / red markers show every bin.
+                    Click any marker for details.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 4 -->
+            <div class="card-hover bg-white rounded-2xl border p-6">
+
+                <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600
+                            flex items-center justify-center text-lg mb-4">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </div>
+
+                <h3 class="font-bold">
+                    Smart Alerts
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1.5">
+                    Critical, warning & info alerts with filtering
+                    and crew dispatch actions.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 5 -->
+            <div class="card-hover bg-white rounded-2xl border p-6">
+
+                <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-600
+                            flex items-center justify-center text-lg mb-4">
+
+                    <i class="fa-solid fa-route"></i>
+
+                </div>
+
+                <h3 class="font-bold">
+                    Route Optimization
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1.5">
+                    AI builds shortest pickup routes — 27% less fuel,
+                    142 trips saved monthly.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 6 -->
+            <div class="card-hover bg-white rounded-2xl border p-6">
+
+                <div class="w-11 h-11 rounded-xl bg-slate-800 text-white
+                            flex items-center justify-center text-lg mb-4">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3 class="font-bold">
+                    Analytics & History
+                </h3>
+
+                <p class="text-sm text-slate-500 mt-1.5">
+                    Daily/weekly waste trends, actual-vs-predicted
+                    accuracy and reports.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-slate-900 py-16">
+
+        <div class="max-w-7xl mx-auto px-4">
+
+            <p class="text-xs font-bold text-green-400 tracking-widest">
+                HOW IT WORKS
+            </p>
+
+            <h2 class="text-3xl font-black text-white mt-2">
+                Sensor to street in 4 steps
+            </h2>
+
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
+
+
+                <!-- STEP 1 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+
+                    <p class="text-3xl font-black text-green-400">
+                        01
+                    </p>
+
+                    <i class="fa-solid fa-satellite-dish text-2xl text-slate-300 mt-3"></i>
+
+                    <h3 class="font-bold text-white mt-2">
+                        Sensor detects level
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-1">
+                        Ultrasonic sensor measures fill + temperature every 5 min.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+
+                    <p class="text-3xl font-black text-teal-300">
+                        02
+                    </p>
+
+                    <i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-300 mt-3"></i>
+
+                    <h3 class="font-bold text-white mt-2">
+                        Data sent to cloud
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-1">
+                        LoRa / NB-IoT gateway streams telemetry securely.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+
+                    <p class="text-3xl font-black text-violet-300">
+                        03
+                    </p>
+
+                    <i class="fa-solid fa-brain text-2xl text-slate-300 mt-3"></i>
+
+                    <h3 class="font-bold text-white mt-2">
+                        AI predicts full time
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-1">
+                        ML model forecasts overflow hours ahead, 91% confidence.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+
+                    <p class="text-3xl font-black text-amber-300">
+                        04
+                    </p>
+
+                    <i class="fa-solid fa-truck-fast text-2xl text-slate-300 mt-3"></i>
+
+                    <h3 class="font-bold text-white mt-2">
+                        Crew gets alert
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-1">
+                        Optimized route pushed to driver app & dashboard.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section id="benefits"
+             class="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-2
+                    gap-10 items-center">
+
+
+        <div>
+
+            <p class="text-xs font-bold text-green-600 tracking-widest">
+                BENEFITS
+            </p>
+
+            <h2 class="text-3xl font-black mt-2">
+                Cleaner streets, lower costs
+            </h2>
+
+
+            <div class="mt-6 space-y-4">
+
+
+                <!-- BENEFIT 1 -->
+                <div class="flex gap-4 bg-white border rounded-2xl p-5">
+
+                    <div class="w-10 h-10 shrink-0 rounded-xl bg-green-100
+                                text-green-600 flex items-center justify-center">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-sm">
+                            Hygiene & public health
+                        </h3>
+
+                        <p class="text-sm text-slate-500">
+                            No overflowing bins near markets, hospitals & schools.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BENEFIT 2 -->
+                <div class="flex gap-4 bg-white border rounded-2xl p-5">
+
+                    <div class="w-10 h-10 shrink-0 rounded-xl bg-blue-100
+                                text-blue-600 flex items-center justify-center">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-sm">
+                            Lower operating cost
+                        </h3>
+
+                        <p class="text-sm text-slate-500">
+                            Collect only full bins — cut fuel, labour & fleet wear.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BENEFIT 3 -->
+                <div class="flex gap-4 bg-white border rounded-2xl p-5">
+
+                    <div class="w-10 h-10 shrink-0 rounded-xl bg-violet-100
+                                text-violet-600 flex items-center justify-center">
+
+                        <i class="fa-solid fa-recycle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-bold text-sm">
+                            Higher recycling
+                        </h3>
+
+                        <p class="text-sm text-slate-500">
+                            Zone-level analytics lift segregation & recycling 12%.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMPACT -->
+        <div id="impact"
+             class="bg-gradient-to-br from-green-600 to-teal-600
+                    rounded-3xl p-8 text-white shadow-xl">
+
+            <h3 class="font-black text-2xl">
+                Pilot impact · Sector 12
+            </h3>
+
+
+            <div class="grid grid-cols-2 gap-4 mt-6">
+
+
+                <div class="bg-white/15 rounded-2xl p-5">
+                    <p class="text-3xl font-black">50</p>
+                    <p class="text-sm text-green-50">
+                        smart bins live
+                    </p>
+                </div>
+
+
+                <div class="bg-white/15 rounded-2xl p-5">
+                    <p class="text-3xl font-black">2.1t</p>
+                    <p class="text-sm text-green-50">
+                        waste / day tracked
+                    </p>
+                </div>
+
+
+                <div class="bg-white/15 rounded-2xl p-5">
+                    <p class="text-3xl font-black">−38%</p>
+                    <p class="text-sm text-green-50">
+                        overflow complaints
+                    </p>
+                </div>
+
+
+                <div class="bg-white/15 rounded-2xl p-5">
+                    <p class="text-3xl font-black">4.8★</p>
+                    <p class="text-sm text-green-50">
+                        citizen rating
+                    </p>
+                </div>
+
+            </div>
+
+
+            <a href="dashboard.html"
+               class="mt-6 inline-block bg-white text-green-700 font-bold
+                      px-6 py-3 rounded-xl text-sm">
+
+                Open live demo
+                <i class="fa-solid fa-arrow-right ml-1"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-10">
+
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row
+                    justify-between gap-6">
+
+            <div>
+
+                <p class="font-extrabold text-white text-lg">
+                    SmartBin <span class="text-green-400">AI</span>
+                </p>
+
+                <p class="text-sm mt-1">
+                    Smarter Waste Management. Cleaner Cities.
+                    · B.Tech Final-Year Project Demo
+                </p>
+
+            </div>
+
+
+            <div class="flex gap-8 text-sm">
+
+
+                <div>
+
+                    <p class="font-bold text-white mb-2">
+                        Product
+                    </p>
+
+                    <a href="dashboard.html"
+                       class="block hover:text-green-400">
+                        Dashboard
+                    </a>
+
+                    <a href="predictions.html"
+                       class="block hover:text-green-400">
+                        AI Predictions
+                    </a>
+
+                    <a href="map.html"
+                       class="block hover:text-green-400">
+                        City Map
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p class="font-bold text-white mb-2">
+                        Team
+                    </p>
+
+                    <a href="alerts.html"
+                       class="block hover:text-green-400">
+                        Alerts
+                    </a>
+
+                    <a href="history.html"
+                       class="block hover:text-green-400">
+                        History
+                    </a>
+
+                    <a href="settings.html"
+                       class="block hover:text-green-400">
+                        Settings
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="text-center text-xs mt-8 text-slate-500">
+            © 2026 SmartBin AI · Mock data for demonstration
+        </p>
+
+    </footer>
+
+</body>
+</html>
